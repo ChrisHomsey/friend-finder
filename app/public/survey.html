@@ -36,7 +36,7 @@
 
 		<h3><strong>Question 1</strong></h3>
 		<h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q1">
+	 	<select data-placeholder="" class="chosen-select" id="answer1">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -47,7 +47,7 @@
 
 		<h3><strong>Question 2</strong></h3>
 		<h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q2">
+	 	<select data-placeholder="" class="chosen-select" id="answer2">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -59,7 +59,7 @@
 
 		<h3><strong>Question 3</strong></h3>
 		<h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q3">
+	 	<select data-placeholder="" class="chosen-select" id="answer3">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -71,7 +71,7 @@
 
 		<h3><strong>Question 4</strong></h3>
 		<h4>You rarely do something just out of sheer curiosity.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q4">
+	 	<select data-placeholder="" class="chosen-select" id="answer4">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -83,7 +83,7 @@
 
 		<h3><strong>Question 5</strong></h3>
 		<h4>People can rarely upset you.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q5">
+	 	<select data-placeholder="" class="chosen-select" id="answer5">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -95,7 +95,7 @@
 
 		<h3><strong>Question 6</strong></h3>
 		<h4>It is often difficult for you to relate to other people’s feelings.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q6">
+	 	<select data-placeholder="" class="chosen-select" id="answer6">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -107,7 +107,7 @@
 
 		<h3><strong>Question 7</strong></h3>
 		<h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q7">
+	 	<select data-placeholder="" class="chosen-select" id="answer7">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -118,7 +118,7 @@
 
 		<h3><strong>Question 8</strong></h3>
 		<h4>You rarely get carried away by fantasies and ideas.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q8">
+	 	<select data-placeholder="" class="chosen-select" id="answer8">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -129,7 +129,7 @@
 
 		<h3><strong>Question 9</strong></h3>
 		<h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q9">
+	 	<select data-placeholder="" class="chosen-select" id="answer9">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -140,7 +140,7 @@
 
 		<h3><strong>Question 10</strong></h3>
 		<h4>You feel more energetic after spending time with a group of people.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q10">
+	 	<select data-placeholder="" class="chosen-select" id="answer10">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
@@ -177,7 +177,7 @@
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchName"></h2>
-	        <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+	        <img id="matchImg" src="./user-images/user1.jpg" alt="">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -197,18 +197,24 @@
 
     	// Form validation
     	function formValidation() {
+		  
 		  var isValid = true;
 		  $('.form-control').each(function() {
-		    if ( $(this).val() === '' )
-		        return false;
+		  	
+		    if ( $(this).val() === '' ) {
+		        isValid = false;
+		    }
 		  });
 
 		  $('.chosen-select').each(function() {
 
-		  	if( $(this).val() === "")
-		  		return = false;
-		  })
+		  	if( $(this).val() === '') {
+		  		isValid = false;
+		  	}
+		  });
+
 		  return isValid;
+		  
 		}
 
 		// If all required fields are filled
@@ -218,7 +224,7 @@
 	    	var userData = {
 	    		name: $("#name").val(),
 	    		photo: $("#photo").val(),
-	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+	    		scores: [$("#answer1").val(), $("#answer2").val(), $("#answer3").val(), $("#answer4").val(), $("#answer5").val(), $("#answer6").val(), $("#answer7").val(), $("#answer8").val(), $("#answer9").val(), $("#answer10").val(), ]
 	    	}
 
 		    
@@ -226,7 +232,7 @@
 	    	// AJAX post the data to the friends API. 
 	    	$.post("/api/friends", userData).done(function(data){
 
-	    		console.log(userData);
+	    		console.log("Friend added: ", userData);
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
 	    		$('#matchImg').attr("src", data.photo);
@@ -238,7 +244,7 @@
 		}
 		else
 		{
-			alert("You won't find any friends with blank fields!");
+			alert("You won't be going to the friend zone with blank fields!");
 		}
     	
     	return false;

@@ -2,7 +2,7 @@ var friends =
 [
   {
     "name":"Ahmed",
-    "photo":"./app/data/user-images/user1.jpg",
+    "photo":"./user-images/user1.jpg",
     "scores":[
         5,
         1,
@@ -18,7 +18,7 @@ var friends =
   },
   {
     "name":"John",
-    "photo":"./app/data/user-images/user2.jpg",
+    "photo":"./user-images/user2.jpg",
     "scores":[
         4,
         3,
@@ -34,7 +34,7 @@ var friends =
   },
   {
     "name":"Jim",
-    "photo":"./app/data/user-images/user3.jpg",
+    "photo":"./user-images/user3.jpg",
     "scores":[
         5,
         3,
@@ -50,7 +50,7 @@ var friends =
   },
   {
     "name":"Cheryl",
-    "photo":"./app/data/user-images/user4.jpg",
+    "photo":"./user-images/user4.jpg",
     "scores":[
         5,
         1,
@@ -66,7 +66,7 @@ var friends =
   },
   {
     "name":"Alexa",
-    "photo":"./app/data/user-images/user5.jpg",
+    "photo":"./user-images/user5.jpg",
     "scores":[
         2,
         3,
@@ -82,7 +82,7 @@ var friends =
   },
   {
     "name":"Samuel",
-    "photo":"./app/data/user-images/user6.jpg",
+    "photo":"./user-images/user6.jpg",
     "scores":[
         3,
         2,
@@ -98,7 +98,7 @@ var friends =
   },
   {
     "name":"Josh",
-    "photo":"./app/data/user-images/user7.jpg",
+    "photo":"./user-images/user7.jpg",
     "scores":[
         1,
         2,
